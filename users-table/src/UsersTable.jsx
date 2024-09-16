@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import {  useNavigate } from "react-router-dom"
 import { AuthContext } from "./Provider/AuthProvider"
 import axios from "axios"
 import Swal from "sweetalert2"
 
 
-function App() {
+function UsersTable() {
 
   const {setUser, user} = useContext(AuthContext)
   const navigate = useNavigate()
@@ -24,7 +24,7 @@ function App() {
 const handleLogout = ()=>{
   localStorage.removeItem('token')
   
-  navigate("/login")
+  navigate("/")
   setUser(null)
 }
 
@@ -145,4 +145,4 @@ const handleUnblockUsers = () => {
   )
 }
 
-export default App
+export default UsersTable;

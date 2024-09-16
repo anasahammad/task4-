@@ -25,7 +25,7 @@ const Signup = () => {
               `${import.meta.env.VITE_BASE_URL}/signup`,
               userInfo
             );
-            navigate("/")
+            navigate("/table")
             console.log(data);
             if (data.user) {
               Swal.fire({
@@ -39,7 +39,7 @@ const Signup = () => {
               localStorage.setItem('token', data.token)
               setUser({name: data.user.name, email: data.user.email, password: data.user.password})
               form.reset()
-              navigate("/")
+              navigate("/table")
             }
           } catch (error) {
             Swal.fire({

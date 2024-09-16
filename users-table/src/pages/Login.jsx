@@ -20,7 +20,7 @@ const Login = () => {
             console.log(data)
 
             if(data.user){
-                navigate("/")
+                navigate("/table")
               Swal.fire({
                 position: "top-center",
                 icon: "success",

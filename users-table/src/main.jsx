@@ -1,16 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Signup from './pages/Signup.jsx';
 import Login from './pages/Login.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 
+import UsersTable from './UsersTable.jsx';
+import PrivateRoute from './PrivateRoute.jsx';
+
 const router = createBrowserRouter([ 
-  { 
-  path: "/", 
-  element: <App/>, 
+  {
+    index: true,
+    element: <Login/>
   },
   {
     path: '/signup',
@@ -18,9 +20,10 @@ const router = createBrowserRouter([
 
   },
   {
-    path: '/login',
-    element: <Login/>
+    path: "/table",
+    element: <PrivateRoute><UsersTable/></PrivateRoute>
   }
+ 
  ]); 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
