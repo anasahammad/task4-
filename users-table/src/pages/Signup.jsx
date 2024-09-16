@@ -65,7 +65,7 @@ const Signup = () => {
 		<div className="flex justify-center mt-6 space-x-2 text-xs ">
 			<a rel="noopener noreferrer" href="#" className="">Forgot Password?</a>
 			<span className="">/</span>
-			<Link to="/login" rel="noopener noreferrer" href="#" className="">Login</Link>
+			<Link to="/" rel="noopener noreferrer" href="#" className="">Login</Link>
 		</div>
 	</form>
 </div>

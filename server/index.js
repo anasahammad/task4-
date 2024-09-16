@@ -9,7 +9,7 @@ const cookieParser = require('cookie-parser')
 require('dotenv').config()
 
 const corsOptions={
-    origin: ["http://localhost:5173", "https://66e71eb323e3231e08880ea4--bejewelled-biscotti-679742.netlify.app"]
+    origin: ["http://localhost:5173", "https://users-table-task4.netlify.app"]
     
 }
 app.use(express.json())
